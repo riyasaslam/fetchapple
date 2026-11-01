@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0f1115">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Fetchapple">
+<title>Fetchapple</title>
+<meta name="author" content="Riyas Aslam M">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8D%8E%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="card">
+  <header>
+    <h1>🍎 Fetchapple</h1>
+    <p class="sub">YouTube · Twitter/X · Facebook · Instagram · Snapchat</p>
+  </header>
+
+  <div class="row">
+    <input id="url" type="url" inputmode="url" placeholder="Paste link here..." autocomplete="off" autocapitalize="off" spellcheck="false">
+    <button id="pasteBtn" class="ghost fit" type="button">Paste</button>
+  </div>
+  <button id="fetchBtn" type="button">Get options</button>
+
+  <section id="preview" hidden>
+    <img id="thumb" alt="" hidden>
+    <div class="controls">
+      <div id="title"></div>
+
+      <label for="quality">Quality / file</label>
+      <select id="quality"></select>
+
+      <label for="saveMode">Save to</label>
+      <select id="saveMode">
+        <option value="downloads">Downloads folder (default)</option>
+      </select>
+      <div id="folderRow" class="row" hidden>
+        <div id="folderName" class="chip"></div>
+        <button id="changeFolder" class="ghost fit" type="button">Change</button>
+      </div>
+      <p id="saveHint" class="hint"></p>
+
+      <button id="dlBtn" type="button">Download</button>
+      <div id="progress" hidden><div id="bar"></div></div>
+      <a id="directLink" class="hint" href="#" target="_blank" rel="noopener" hidden>Download not starting? Open the direct link</a>
+      <div id="picker" hidden></div>
+    </div>
+  </section>
+
+  <div id="msg" role="status" aria-live="polite"></div>
+
+  <button class="ghost" id="toggleSettings" type="button">Settings</button>
+  <section id="settings" hidden>
+    <label for="token">Access token (only if you set ACCESS_TOKEN in Netlify)</label>
+    <input id="token" type="password" placeholder="Leave empty if not used">
+    <button id="saveBtn" type="button">Save</button>
+  </section>
+
+  <footer>Developed by <strong>Riyas Aslam M</strong></footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

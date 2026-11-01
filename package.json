@@ -1,0 +1,8 @@
+{
+  "name": "fetchapple",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Fetchapple - paste a link, pick quality, download. Developed by Riyas Aslam M",
+  "engines": { "node": ">=18" }
+}
